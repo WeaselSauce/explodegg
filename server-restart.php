@@ -8,6 +8,7 @@ if (file_exists("/home/rustserver/countdown.lock"))
     exit(0);
 }
 
+// this script is indended to be called from checker.sh which runs at 5 minute intervals via cron
 // https://oxidemod.org/threads/php-web-rcon.22894/
 // https://github.com/Textalk/websocket-php
 
