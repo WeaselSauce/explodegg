@@ -1,4 +1,10 @@
 #!/bin/bash
+
+#### README
+# This script is not intended to be run directly from cron.
+# Instead it is called by checker.sh which runs from cron on 5 minute
+# intervals to make sure the server is online and oxide is up to date
+
 # MARKER FOR LOG FILE
 LASTWIPED=$(date -d "$D" '+%m-%d') # get current date
 echo "#### WIPE LOG: $LASTWIPED "
