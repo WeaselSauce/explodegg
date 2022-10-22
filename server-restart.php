@@ -9,6 +9,8 @@ if (file_exists("/home/rustserver/countdown.lock"))
 }
 
 // this script is indended to be called from checker.sh which runs at 5 minute intervals via cron
+// it assumes it will be run on the same host as the RustDedicated server process (bare metal or inside a persistent LXC container)
+// This approach makes a lot less sense if using ephemeral Docker containers 
 // https://oxidemod.org/threads/php-web-rcon.22894/
 // https://github.com/Textalk/websocket-php
 
