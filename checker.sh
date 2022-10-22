@@ -1,5 +1,6 @@
 #!/bin/bash
 
+### RUN ME FROM CRON AT 5 MINUTE INTERVALS ###
 
 we=$(LC_TIME=C date +%A)
 dm=$(date +%d)
