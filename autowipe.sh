@@ -7,8 +7,7 @@ echo "#### WIPE LOG: $LASTWIPED "
 # using 68 hours as our guide since we wipe every 3 days or 72 hours and this script
 # should execute every day at 4pm CT
 
-MAPFILE=$(/bin/ls /home/rustserver/serverfiles/server/rustserver/proceduralmap.*.map)
-#MAPFILE=$(/bin/ls /home/rustserver/serverfiles/server/rustserver/barren.*.map)
+MAPFILE=$(/bin/ls -t /home/rustserver/serverfiles/server/rustserver/proceduralmap.*.map)
 
 MAXAGE=$(bc <<< '68*60*60') # seconds in 68 hours
 # file age in seconds = current_time - file_modification_time.
