@@ -37,6 +37,9 @@ $restart = array(
 
 
 try {
+    // this is a really low effort way to check if oxide is up to date with latest version
+    // but has worked just fine for YEARS so not gonna sweat it (grep'ing strings output for the latest oxide version)
+    // we wrap this in a try block in case the shell commands / curl call throws an error (e.g. 500 error)
     $oxide_strings = shell_exec("/usr/bin/strings /home/rustserver/serverfiles/RustDedicated_Data/Managed/Oxide.Rust.dll");
     $latest_oxide = shell_exec("/usr/bin/curl -s https://api.github.com/repos/OxideMod/Oxide.Rust/releases/latest | grep tag_name | cut -d : -f 2 | awk '{print $1}'");
     $latest_oxide = str_replace('"', '', $latest_oxide);
