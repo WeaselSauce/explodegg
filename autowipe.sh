@@ -38,8 +38,6 @@ fi
 /home/rustserver/automation/plugin-data-wipe.sh
 
 # update and start back up
-#/home/rustserver/rustserver update
-#/home/rustserver/rustserver mods-update
 /home/rustserver/rustserver start
 
 # remove lock file
