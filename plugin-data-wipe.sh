@@ -6,7 +6,9 @@ rm /home/rustserver/serverfiles/oxide/data/HammerRemove.json
 rm /home/rustserver/serverfiles/oxide/data/DynamicCupShare.json
 rm /home/rustserver/serverfiles/oxide/data/AutoCodeLock.json
 rm /home/rustserver/serverfiles/oxide/data/killstreak_player_data.json
-#rm /home/rustserver/serverfiles/oxide/data/SpawnSetWhitelists.json
 rm -rf /home/rustserver/serverfiles/oxide/data/KDRGui
 rm -rf /home/rustserver/serverfiles/oxide/data/Arkan
-#rm -rf /home/rustserver/serverfiles/oxide/data/Backpacks
+
+# Delete backpack files that haven't been touched in 90+ days
+/usr/bin/find /home/rustserver/serverfiles/oxide/data/Backpacks/* -mtime +90 -exec rm {} \;
+
